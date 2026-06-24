@@ -1,14 +1,37 @@
-import type { Seguro } from "@/types/seguro";
-
-type IconName =
-  | Seguro["icono"]
+export type IconKey =
+  | "hogar"
+  | "auto"
+  | "vida"
+  | "salud"
+  | "decesos"
+  | "viaje"
+  | "mascotas"
+  | "negocio"
+  | "ahorro"
   | "telefono"
   | "revision"
   | "estudio"
   | "cercania"
   | "siniestro";
 
-const paths: Record<IconName, React.ReactNode> = {
+export const ICON_OPTIONS: { key: IconKey; label: string }[] = [
+  { key: "hogar", label: "Hogar" },
+  { key: "auto", label: "Auto y moto" },
+  { key: "vida", label: "Vida" },
+  { key: "salud", label: "Salud" },
+  { key: "decesos", label: "Decesos" },
+  { key: "viaje", label: "Viaje" },
+  { key: "mascotas", label: "Mascotas" },
+  { key: "negocio", label: "Negocio" },
+  { key: "ahorro", label: "Ahorro" },
+  { key: "telefono", label: "Teléfono" },
+  { key: "revision", label: "Revisión" },
+  { key: "estudio", label: "Estudio" },
+  { key: "cercania", label: "Cercanía" },
+  { key: "siniestro", label: "Siniestro" },
+];
+
+const paths: Record<IconKey, React.ReactNode> = {
   hogar: (
     <path d="M3 11.5 12 4l9 7.5M5.5 10v9a1 1 0 0 0 1 1H9.5a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-9" />
   ),
@@ -18,16 +41,35 @@ const paths: Record<IconName, React.ReactNode> = {
   vida: (
     <path d="M12 20s-7-4.35-9.2-8.6C1.4 8.6 2.9 5.5 6 5.5c2 0 3.3 1.1 4 2.3.7-1.2 2-2.3 4-2.3 3.1 0 4.6 3.1 3.2 5.9C19 15.65 12 20 12 20Z" />
   ),
-  salud: (
-    <>
-      <path d="M9 3.5h6v6h6v6h-6v6H9v-6H3v-6h6Z" />
-    </>
-  ),
+  salud: <path d="M9 3.5h6v6h6v6h-6v6H9v-6H3v-6h6Z" />,
   decesos: (
     <>
       <path d="M12 3c1.6 1.9 1.6 3.4 0 5-1.6-1.6-1.6-3.1 0-5Z" />
       <path d="M9.5 9h5v10.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V9Z" />
       <path d="M7 21h10" />
+    </>
+  ),
+  viaje: <path d="M21 3 3 10.5l6.5 2.5L12 21l3-7.5L21 3Z" />,
+  mascotas: (
+    <>
+      <circle cx="12" cy="15" r="3.2" />
+      <circle cx="7" cy="10" r="1.6" />
+      <circle cx="11" cy="7" r="1.6" />
+      <circle cx="15" cy="7" r="1.6" />
+      <circle cx="17.5" cy="10.5" r="1.6" />
+    </>
+  ),
+  negocio: (
+    <>
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+      <path d="M4 8h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" />
+      <path d="M3 13h18" />
+    </>
+  ),
+  ahorro: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M9.5 9.8c.3-.7 1.2-1.3 2.5-1.3 1.4 0 2.5.7 2.5 1.8s-1 1.6-2.5 1.8c-1.6.2-2.5.8-2.5 1.9 0 1 1.1 1.7 2.5 1.7 1.3 0 2.2-.5 2.5-1.2M12 7v1.4M12 15.6V17" />
     </>
   ),
   telefono: (
@@ -61,7 +103,7 @@ export default function IconBadge({
   className = "",
   size = "md",
 }: {
-  icon: IconName;
+  icon: IconKey;
   className?: string;
   size?: "sm" | "md" | "lg";
 }) {

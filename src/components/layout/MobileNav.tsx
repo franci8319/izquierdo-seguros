@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "@/lib/nav-links";
 import CtaButton from "@/components/ui/CtaButton";
-import { business } from "@/lib/constants";
+import { toTelHref } from "@/lib/phone";
+import type { SiteContent } from "@/types/content";
 
-export default function MobileNav() {
+export default function MobileNav({ contact }: { contact: SiteContent["contact"] }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -49,7 +50,7 @@ export default function MobileNav() {
               </a>
             ))}
           </nav>
-          <CtaButton href={business.phone.landlineHref} className="mt-4 w-full">
+          <CtaButton href={toTelHref(contact.phoneLandline)} className="mt-4 w-full">
             Llamar ahora
           </CtaButton>
         </div>

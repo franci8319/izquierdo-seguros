@@ -1,9 +1,9 @@
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SeguroCard from "@/components/ui/SeguroCard";
-import { segurosData } from "@/lib/seguros-data";
+import type { SeguroContent } from "@/types/content";
 
-export default function InsuranceProducts() {
+export default function InsuranceProducts({ seguros }: { seguros: SeguroContent[] }) {
   return (
     <section id="seguros" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ export default function InsuranceProducts() {
           itemsSelector="[data-card]"
           className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {segurosData.map((seguro) => (
+          {seguros.map((seguro) => (
             <div data-card key={seguro.id}>
               <SeguroCard seguro={seguro} />
             </div>

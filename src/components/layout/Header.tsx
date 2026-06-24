@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { navLinks } from "@/lib/nav-links";
-import { business } from "@/lib/constants";
 import CtaButton from "@/components/ui/CtaButton";
 import MobileNav from "./MobileNav";
+import { toTelHref } from "@/lib/phone";
+import type { SiteContent } from "@/types/content";
 
-export default function Header() {
+export default function Header({ contact }: { contact: SiteContent["contact"] }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -50,10 +51,10 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <CtaButton href={business.phone.landlineHref}>Llamar ahora</CtaButton>
+          <CtaButton href={toTelHref(contact.phoneLandline)}>Llamar ahora</CtaButton>
         </div>
 
-        <MobileNav />
+        <MobileNav contact={contact} />
       </div>
     </header>
   );
