@@ -39,8 +39,32 @@ export default function RootLayout({
     address: {
       "@type": "PostalAddress",
       streetAddress: content.contact.address,
+      addressLocality: "Dúrcal",
+      addressRegion: "Granada",
+      postalCode: "18650",
       addressCountry: "ES",
     },
+    areaServed: "Dúrcal y comarca (Granada)",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "14:30",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "16:30",
+        closes: "19:30",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "09:00",
+        closes: "14:00",
+      },
+    ],
     url: "https://izquierdoseguros.es",
   };
 
