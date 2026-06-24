@@ -84,20 +84,6 @@ export default function AdminPage() {
             value={content.images.about}
             onChange={(about) => setContent({ ...content, images: { ...content.images, about } })}
           />
-          <ImageUploader
-            label="Fondo de Seguros (escritorio)"
-            value={content.images.segurosBackgroundDesktop}
-            onChange={(segurosBackgroundDesktop) =>
-              setContent({ ...content, images: { ...content.images, segurosBackgroundDesktop } })
-            }
-          />
-          <ImageUploader
-            label="Fondo de Seguros (móvil)"
-            value={content.images.segurosBackgroundMobile}
-            onChange={(segurosBackgroundMobile) =>
-              setContent({ ...content, images: { ...content.images, segurosBackgroundMobile } })
-            }
-          />
         </div>
       </section>
 

@@ -23,11 +23,7 @@ export default function Home() {
       <main>
         <Hero hero={content.hero} heroImage={content.images.hero} contact={content.contact} />
         <AboutUs aboutUs={content.aboutUs} aboutImage={content.images.about} />
-        <InsuranceProducts
-          seguros={content.seguros}
-          backgroundDesktop={content.images.segurosBackgroundDesktop}
-          backgroundMobile={content.images.segurosBackgroundMobile}
-        />
+        <InsuranceProducts seguros={content.seguros} />
         <WhyChooseUs whyChooseUs={content.whyChooseUs} />
         <Contact contact={content.contact} />
       </main>

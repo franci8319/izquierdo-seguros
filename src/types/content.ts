@@ -51,8 +51,6 @@ export type SiteContent = {
   images: {
     hero: string;
     about: string;
-    segurosBackgroundDesktop: string | null;
-    segurosBackgroundMobile: string | null;
   };
   banner: {
     enabled: boolean;
