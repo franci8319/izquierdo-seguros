@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+
+  /* Azul corporativo extraído del logo (#0048A0) */
+  --color-brand-50: #eaf1fb;
+  --color-brand-100: #d2e3f7;
+  --color-brand-200: #a8c7ef;
+  --color-brand-300: #7ba8e5;
+  --color-brand-400: #4a86d6;
+  --color-brand-500: #1f66c2;
+  --color-brand-600: #0048a0;
+  --color-brand-700: #003b82;
+  --color-brand-800: #002c61;
+  --color-brand-900: #001f45;
+
+  /* Morado de la estrella del logo (#523296): solo acentos puntuales */
+  --color-accent-100: #ebe3f5;
+  --color-accent-500: #523296;
+  --color-accent-600: #432878;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
