@@ -41,6 +41,7 @@ export type SiteContent = {
     whatsappNumber: string;
     address: string;
     email: string;
+    schedule: string;
   };
   legal: {
     razonSocial: string;

@@ -1,4 +1,5 @@
 import TextField from "./TextField";
+import TextAreaField from "./TextAreaField";
 import type { SiteContent } from "@/types/content";
 
 export default function ContactLegalEditor({
@@ -37,6 +38,12 @@ export default function ContactLegalEditor({
           onChange={(address) => onChangeContact({ ...contact, address })}
         />
         <TextField label="Email" value={contact.email} onChange={(email) => onChangeContact({ ...contact, email })} />
+        <TextAreaField
+          label="Horario de oficina"
+          rows={3}
+          value={contact.schedule}
+          onChange={(schedule) => onChangeContact({ ...contact, schedule })}
+        />
         <hr className="border-neutral-200" />
         <TextField
           label="Razón social"

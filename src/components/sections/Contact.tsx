@@ -47,6 +47,14 @@ export default function Contact({ contact }: { contact: SiteContent["contact"] }
               </div>
             </div>
 
+            <div className="flex items-start gap-4">
+              <IconBadge icon="revision" />
+              <div>
+                <p className="text-sm font-semibold text-white/70 uppercase">Horario de oficina</p>
+                <p className="whitespace-pre-line text-lg font-medium">{contact.schedule}</p>
+              </div>
+            </div>
+
             <div className="flex flex-wrap gap-4 pt-2">
               <CtaButton href={toTelHref(contact.phoneLandline)}>Llamar ahora</CtaButton>
               <CtaButton href={toWhatsappHref(contact.whatsappNumber)} variant="whatsapp">
