@@ -24,7 +24,15 @@ export default function AdminShell({
   }
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="relative min-h-screen bg-neutral-50">
+      <div
+        className="fixed inset-0 -z-10 opacity-[0.06]"
+        style={{
+          backgroundImage: "url(/images/patterns/seguros-bg-mobile.jpg)",
+          backgroundRepeat: "repeat",
+          backgroundSize: "320px",
+        }}
+      />
       <header className="sticky top-0 z-10 flex items-center justify-between border-b border-neutral-200 bg-white px-6 py-4">
         <h1 className="text-base font-semibold text-foreground">Panel de administración</h1>
         <div className="flex items-center gap-4">
@@ -45,7 +53,7 @@ export default function AdminShell({
           </button>
         </div>
       </header>
-      <main className="mx-auto max-w-4xl space-y-10 px-6 py-10">{children}</main>
+      <main className="relative z-0 mx-auto max-w-4xl space-y-10 px-6 py-10">{children}</main>
     </div>
   );
 }

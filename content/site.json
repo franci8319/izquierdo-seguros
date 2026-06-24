@@ -99,7 +99,9 @@
   },
   "images": {
     "hero": "/images/uploads/1782338126209-puenta-lata-durcal.png",
-    "about": "/images/uploads/1782338847975-plaza-durcal.jpg"
+    "about": "/images/uploads/1782338847975-plaza-durcal.jpg",
+    "segurosBackgroundDesktop": "/images/patterns/seguros-bg-desktop.jpg",
+    "segurosBackgroundMobile": "/images/patterns/seguros-bg-mobile.jpg"
   },
   "banner": {
     "enabled": true,
