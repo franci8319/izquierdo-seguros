@@ -31,7 +31,7 @@ export default function BannerModal({ banner }: { banner: SiteContent["banner"] 
           type="button"
           aria-label="Cerrar aviso"
           onClick={close}
-          className="absolute right-4 top-4 text-neutral-400 hover:text-neutral-700"
+          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-neutral-500 shadow-md hover:text-neutral-800"
         >
           <svg
             viewBox="0 0 24 24"
@@ -45,8 +45,14 @@ export default function BannerModal({ banner }: { banner: SiteContent["banner"] 
           </svg>
         </button>
         {banner.image && (
-          <div className="relative mb-4 h-40 w-full overflow-hidden rounded-xl">
-            <Image src={banner.image} alt="" fill className="object-cover" />
+          <div className="relative mb-4 max-h-80 w-full overflow-hidden rounded-xl bg-neutral-100">
+            <Image
+              src={banner.image}
+              alt=""
+              width={800}
+              height={800}
+              className="h-auto max-h-80 w-full object-contain"
+            />
           </div>
         )}
         <p className="pr-6 text-base leading-relaxed text-neutral-800">{banner.text}</p>
