@@ -13,9 +13,18 @@
       "Cada año revisamos tus pólizas para intentar mejorar el precio, mantener las mejores condiciones posibles o, al menos, minimizar las subidas — siempre buscando tu beneficio, no el nuestro. Porque nuestro objetivo nunca ha sido solo vender seguros: es construir relaciones duraderas basadas en la confianza, el asesoramiento honesto y el trato personalizado."
     ],
     "stats": [
-      { "icon": "cercania", "label": "Trato familiar y cercano" },
-      { "icon": "revision", "label": "Revisamos anualmente tu seguro" },
-      { "icon": "telefono", "label": "Atención fuera de horario en urgencias" }
+      {
+        "icon": "cercania",
+        "label": "Trato familiar y cercano"
+      },
+      {
+        "icon": "revision",
+        "label": "Revisamos anualmente tu seguro"
+      },
+      {
+        "icon": "telefono",
+        "label": "Atención fuera de horario en urgencias"
+      }
     ]
   },
   "whyChooseUs": {
@@ -88,7 +97,7 @@
     "dgsfpNumber": ""
   },
   "images": {
-    "hero": "/images/hero/hero-familia.jpg",
+    "hero": "/images/uploads/1782338126209-puenta-lata-durcal.png",
     "about": "/images/about/equipo-oficina.jpg"
   },
   "banner": {
