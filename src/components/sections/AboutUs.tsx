@@ -6,8 +6,8 @@ import { aboutUsCopy } from "@/lib/constants";
 
 const stats = [
   { icon: "cercania" as const, label: "Trato familiar y cercano" },
-  { icon: "comparar" as const, label: "Comparamos varias aseguradoras" },
-  { icon: "telefono" as const, label: "Atención incluso fuera de horario" },
+  { icon: "revision" as const, label: "Revisamos anualmente tu seguro" },
+  { icon: "telefono" as const, label: "Atención fuera de horario en urgencias" },
 ] as const;
 
 export default function AboutUs() {

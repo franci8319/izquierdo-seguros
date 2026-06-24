@@ -25,14 +25,14 @@ export default function Header() {
         scrolled ? "bg-white/95 shadow-sm backdrop-blur-sm" : "bg-white/0"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#hero" className="flex items-center gap-2">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#hero" className="flex shrink-0 items-center gap-2">
           <Image
             src="/logos/logo-color.png"
             alt="Izquierdo Seguros"
-            width={160}
-            height={160}
-            className="h-10 w-auto"
+            width={242}
+            height={100}
+            className="h-14 w-auto sm:h-16"
             priority
           />
         </a>

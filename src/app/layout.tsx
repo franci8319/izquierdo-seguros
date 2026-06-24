@@ -28,13 +28,13 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://izquierdoseguros.es"),
-  title: "Izquierdo Seguros | Correduría de seguros en Dúrcal, Granada",
+  title: "Izquierdo Seguros | Agentes de seguros en Dúrcal, Granada",
   description:
-    "Correduría de seguros familiar en Dúrcal (Granada). Décadas de experiencia, trato cercano y asesoramiento personalizado en seguros de hogar, auto, vida, salud y decesos.",
+    "Agentes de seguros, empresa familiar en Dúrcal (Granada). Décadas de experiencia, trato cercano y asesoramiento personalizado en seguros de hogar, auto, vida, salud y decesos.",
   openGraph: {
     title: "Izquierdo Seguros",
     description:
-      "Correduría de seguros familiar en Dúrcal (Granada). Trato cercano y asesoramiento personalizado.",
+      "Agentes de seguros, empresa familiar en Dúrcal (Granada). Trato cercano y asesoramiento personalizado.",
     locale: "es_ES",
     type: "website",
   },

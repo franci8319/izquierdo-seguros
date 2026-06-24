@@ -13,13 +13,13 @@ export default function Footer() {
             <Image
               src="/logos/logo-blanco.png"
               alt="Izquierdo Seguros"
-              width={160}
-              height={160}
-              className="h-10 w-auto"
+              width={242}
+              height={100}
+              className="h-14 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm text-white/70">
-              Correduría de seguros familiar en Dúrcal (Granada). Trato cercano,
-              décadas de experiencia.
+              Agentes de seguros, empresa familiar en Dúrcal (Granada). Trato
+              cercano, décadas de experiencia.
             </p>
           </div>
 

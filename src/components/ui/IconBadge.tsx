@@ -1,6 +1,12 @@
 import type { Seguro } from "@/types/seguro";
 
-type IconName = Seguro["icono"] | "telefono" | "comparar" | "cercania" | "siniestro";
+type IconName =
+  | Seguro["icono"]
+  | "telefono"
+  | "revision"
+  | "estudio"
+  | "cercania"
+  | "siniestro";
 
 const paths: Record<IconName, React.ReactNode> = {
   hogar: (
@@ -27,7 +33,21 @@ const paths: Record<IconName, React.ReactNode> = {
   telefono: (
     <path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 5 5.1 1.5 1.5 0 0 1 6.5 3.5Z" />
   ),
-  comparar: <path d="M7 4v16M17 4v16M3 9h8M13 15h8" />,
+  revision: (
+    <>
+      <path d="M7 3v3M17 3v3" />
+      <path d="M5 6h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" />
+      <path d="M4 10h16" />
+      <path d="M9 14.5 11 16.5 15.5 12" />
+    </>
+  ),
+  estudio: (
+    <>
+      <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z" />
+      <path d="M6 6h12a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" />
+      <path d="M9 12h6M9 16h6" />
+    </>
+  ),
   cercania: (
     <path d="M8.5 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm7 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2.5 20v-1.5a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4V20m1-9.5a4 4 0 0 1 4 4V20" />
   ),

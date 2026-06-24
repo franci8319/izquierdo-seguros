@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div>
           <p data-hero-anim className="text-sm font-semibold tracking-wide text-brand-600 uppercase">
-            Correduría de seguros en Dúrcal, Granada
+            Agentes de seguros en Dúrcal, Granada
           </p>
           <h1
             data-hero-anim
@@ -47,8 +47,8 @@ export default function Hero() {
           </h1>
           <p data-hero-anim className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
             Décadas acompañando a familias de Dúrcal y la comarca con un trato cercano que ya
-            no es fácil de encontrar. Comparamos entre varias aseguradoras y cuidamos de ti
-            también fuera del horario habitual.
+            no es fácil de encontrar. Estudiamos tus necesidades, revisamos tu seguro cada año
+            y te atendemos también fuera de horario en caso de urgencia.
           </p>
           <div data-hero-anim className="mt-8 flex flex-wrap gap-4">
             <CtaButton href={business.phone.landlineHref}>Llamar ahora</CtaButton>

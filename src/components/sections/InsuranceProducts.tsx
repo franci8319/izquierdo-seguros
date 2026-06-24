@@ -10,7 +10,7 @@ export default function InsuranceProducts() {
         <SectionHeading
           eyebrow="Nuestros seguros"
           title="Seguros pensados para tu día a día"
-          description="Comparamos entre varias aseguradoras para ofrecerte la cobertura que mejor se ajusta a ti, con el mismo trato cercano de siempre."
+          description="Estudiamos tus necesidades y revisamos tu póliza cada año para ajustar tu cobertura, con el mismo trato cercano de siempre."
           align="center"
         />
 

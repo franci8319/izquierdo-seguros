@@ -4,28 +4,28 @@ import IconBadge from "@/components/ui/IconBadge";
 
 const ventajas = [
   {
-    icon: "comparar" as const,
-    title: "Comparamos varias aseguradoras",
+    icon: "revision" as const,
+    title: "Revisamos anualmente tu seguro",
     description:
-      "No dependemos de una sola compañía: buscamos entre varias para encontrar la cobertura y el precio que más te convienen.",
+      "Cada año revisamos tu póliza para mejorar el precio o mantener las mejores condiciones, buscando siempre tu beneficio.",
   },
   {
-    icon: "cercania" as const,
-    title: "Atención personalizada y cercana",
+    icon: "telefono" as const,
+    title: "Atención fuera de horario en urgencias",
     description:
-      "Hablas siempre con una persona que te conoce, no con un contestador automático ni un chatbot.",
+      "Si tienes una urgencia, te atendemos incluso fuera del horario habitual, porque sabemos que un imprevisto no avisa.",
+  },
+  {
+    icon: "estudio" as const,
+    title: "Estudiamos tus necesidades y ajustamos tus coberturas",
+    description:
+      "Analizamos tu situación para ofrecerte la cobertura justa que necesitas, ni más ni menos.",
   },
   {
     icon: "siniestro" as const,
     title: "Te acompañamos en cada siniestro",
     description:
       "Gestionamos contigo cada parte y cada siniestro, resolviendo tus dudas de forma directa, paso a paso.",
-  },
-  {
-    icon: "telefono" as const,
-    title: "Disponibles cuando nos necesitas",
-    description:
-      "Atendemos incluso fuera del horario habitual, porque sabemos que un imprevisto no avisa.",
   },
 ];
 

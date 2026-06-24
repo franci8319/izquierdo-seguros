@@ -26,7 +26,7 @@ export const segurosData: Seguro[] = [
     id: "salud",
     titulo: "Salud",
     descripcion:
-      "Acceso a la sanidad privada que mejor se adapta a tu familia, comparando entre varias aseguradoras para encontrar tu mejor opción.",
+      "Acceso a la sanidad privada que mejor se adapta a tu familia, estudiando tus necesidades para ajustar tu cobertura cada año.",
     icono: "salud",
   },
   {
