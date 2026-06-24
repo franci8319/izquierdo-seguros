@@ -98,14 +98,14 @@
   },
   "images": {
     "hero": "/images/uploads/1782338126209-puenta-lata-durcal.png",
-    "about": "/images/about/equipo-oficina.jpg"
+    "about": "/images/uploads/1782338847975-plaza-durcal.jpg"
   },
   "banner": {
-    "enabled": false,
+    "enabled": true,
     "text": "",
-    "image": null,
+    "image": "/images/uploads/1782338856195-whatsapp-image-2026-06-24-at-12.58.11.jpg",
     "ctaText": null,
     "ctaHref": null,
-    "updatedAt": "2026-06-24T00:00:00.000Z"
+    "updatedAt": "2026-06-24T22:07:37.135Z"
   }
 }
