@@ -1,30 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
-import { business } from "@/lib/constants";
+import { getSiteContent } from "@/lib/content";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "InsuranceAgency",
-  name: business.name,
-  image: "https://izquierdoseguros.es/logos/logo-color.png",
-  telephone: business.phone.landline,
-  email: business.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: business.address.street,
-    addressLocality: business.address.city,
-    addressRegion: business.address.province,
-    addressCountry: "ES",
-  },
-  url: "https://izquierdoseguros.es",
-};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://izquierdoseguros.es"),
@@ -45,6 +28,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const content = getSiteContent();
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    name: "Izquierdo Seguros",
+    image: "https://izquierdoseguros.es/logos/logo-color.png",
+    telephone: content.contact.phoneLandline,
+    email: content.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: content.contact.address,
+      addressCountry: "ES",
+    },
+    url: "https://izquierdoseguros.es",
+  };
+
   return (
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-foreground">
