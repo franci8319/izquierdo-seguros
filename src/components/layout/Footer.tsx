@@ -1,8 +1,15 @@
 import Image from "next/image";
 import { navLinks } from "@/lib/nav-links";
-import { business } from "@/lib/constants";
+import { toTelHref } from "@/lib/phone";
+import type { SiteContent } from "@/types/content";
 
-export default function Footer() {
+export default function Footer({
+  contact,
+  legal,
+}: {
+  contact: SiteContent["contact"];
+  legal: SiteContent["legal"];
+}) {
   const year = new Date().getFullYear();
 
   return (
@@ -43,20 +50,20 @@ export default function Footer() {
               Contacto
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
-              <li>{business.address.full}</li>
+              <li>{contact.address}</li>
               <li>
-                <a href={business.phone.landlineHref} className="hover:text-white">
-                  {business.phone.landline}
+                <a href={toTelHref(contact.phoneLandline)} className="hover:text-white">
+                  {contact.phoneLandline}
                 </a>
               </li>
               <li>
-                <a href={business.phone.mobileHref} className="hover:text-white">
-                  {business.phone.mobile} (WhatsApp)
+                <a href={toTelHref(contact.phoneMobile)} className="hover:text-white">
+                  {contact.phoneMobile} (WhatsApp)
                 </a>
               </li>
               <li>
-                <a href={`mailto:${business.email}`} className="hover:text-white">
-                  {business.email}
+                <a href={`mailto:${contact.email}`} className="hover:text-white">
+                  {contact.email}
                 </a>
               </li>
             </ul>
@@ -64,10 +71,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/50">
-          <p>
-            © {year} {business.name}. Todos los derechos reservados.
-          </p>
-          {/* TODO: razón social, CIF y nº de registro DGSFP — pendiente de datos del cliente */}
+          <p>© {year} Izquierdo Seguros. Todos los derechos reservados.</p>
+          {legal.razonSocial && (
+            <p className="mt-1">
+              {legal.razonSocial} — CIF {legal.cif} — Nº registro DGSFP {legal.dgsfpNumber}
+            </p>
+          )}
         </div>
       </div>
     </footer>
