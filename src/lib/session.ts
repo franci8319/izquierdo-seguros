@@ -49,7 +49,7 @@ export async function verifySessionToken(token: string | undefined): Promise<boo
   try {
     const key = await getSecretKey();
     const signature = fromBase64Url(signatureB64);
-    return await crypto.subtle.verify("HMAC", key, signature, new TextEncoder().encode(payload));
+    return await crypto.subtle.verify("HMAC", key, signature as BufferSource, new TextEncoder().encode(payload));
   } catch {
     return false;
   }
