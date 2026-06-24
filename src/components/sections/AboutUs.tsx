@@ -15,11 +15,7 @@ export default function AboutUs({
     <section id="sobre-nosotros" className="bg-neutral-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <RevealOnScroll className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-md">
-            <Image src={aboutImage} alt="Oficina de Izquierdo Seguros en Dúrcal" fill className="object-cover" />
-          </RevealOnScroll>
-
-          <RevealOnScroll>
+          <RevealOnScroll className="lg:order-2">
             <SectionHeading eyebrow={aboutUs.eyebrow} title={aboutUs.heading} />
             <div className="mt-6 space-y-4">
               {aboutUs.paragraphs.map((p) => (
@@ -37,6 +33,10 @@ export default function AboutUs({
                 </li>
               ))}
             </ul>
+          </RevealOnScroll>
+
+          <RevealOnScroll className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-md lg:order-1">
+            <Image src={aboutImage} alt="Oficina de Izquierdo Seguros en Dúrcal" fill className="object-cover" />
           </RevealOnScroll>
         </div>
       </div>

@@ -10,6 +10,7 @@ import WhyChooseUsEditor from "@/components/admin/WhyChooseUsEditor";
 import ImageUploader from "@/components/admin/ImageUploader";
 import ContactLegalEditor from "@/components/admin/ContactLegalEditor";
 import BannerEditor from "@/components/admin/BannerEditor";
+import ChangePasswordEditor from "@/components/admin/ChangePasswordEditor";
 
 export default function AdminPage() {
   const [content, setContent] = useState<SiteContent | null>(null);
@@ -94,6 +95,8 @@ export default function AdminPage() {
       />
 
       <BannerEditor banner={content.banner} onChange={(banner) => setContent({ ...content, banner })} />
+
+      <ChangePasswordEditor />
     </AdminShell>
   );
 }

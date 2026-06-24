@@ -8,6 +8,11 @@ import Contact from "@/components/sections/Contact";
 import BannerModal from "@/components/BannerModal";
 import { getSiteContent } from "@/lib/content";
 
+// Content is admin-edited and must reflect the latest deploy immediately;
+// without this, Vercel's edge cache can keep serving a stale prerendered
+// page for several minutes after a redeploy.
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const content = getSiteContent();
 
