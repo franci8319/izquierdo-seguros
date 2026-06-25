@@ -84,7 +84,7 @@ export default function AdminPage() {
 
   return (
     <div>
-      <div className="fixed inset-x-0 top-20 z-[60] flex items-center justify-between border-b border-neutral-200 bg-white px-4 py-3 shadow-sm sm:px-6">
+      <div className="fixed inset-x-0 top-20 z-[60] flex h-14 items-center justify-between border-b border-neutral-200 bg-white px-4 shadow-sm sm:px-6">
         <div className="flex items-center gap-3 text-sm">
           <span className="font-semibold text-foreground">Editando la web</span>
           <span className="hidden text-neutral-500 sm:inline">
@@ -123,7 +123,7 @@ export default function AdminPage() {
           </button>
         </div>
       </div>
-      <div className="h-14" />
+      <div className="h-[136px]" />
 
       <Header contact={content.contact} />
 
