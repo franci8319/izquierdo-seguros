@@ -1,5 +1,6 @@
 import TextField from "./TextField";
 import TextAreaField from "./TextAreaField";
+import ImageUploader from "./ImageUploader";
 import type { Testimonial } from "@/types/content";
 
 export default function TestimonialsEditor({
@@ -14,7 +15,7 @@ export default function TestimonialsEditor({
   }
 
   function addTestimonial() {
-    onChange([...testimonials, { id: `testimonio-${Date.now()}`, quote: "", author: "" }]);
+    onChange([...testimonials, { id: `testimonio-${Date.now()}`, quote: "", author: "", avatar: null }]);
   }
 
   function removeTestimonial(index: number) {
@@ -51,6 +52,11 @@ export default function TestimonialsEditor({
               label="Autor (nombre o iniciales)"
               value={testimonial.author}
               onChange={(author) => updateTestimonial(index, { author })}
+            />
+            <ImageUploader
+              label="Foto del cliente"
+              value={testimonial.avatar}
+              onChange={(avatar) => updateTestimonial(index, { avatar })}
             />
           </div>
         ))}

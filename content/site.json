@@ -94,17 +94,20 @@
     {
       "id": "testimonio-1",
       "quote": "Trato perfecto, nunca me han querido vender nada más de lo que necesito. Da gusto dar con gente tan honrada en este sector. Recomendables 100%.",
-      "author": "C. Melguizo"
+      "author": "C. Melguizo",
+      "avatar": "/images/avatars/avatar-melguizo.jpg"
     },
     {
       "id": "testimonio-2",
       "quote": "Muy amables tanto el padre como la hija. Se nota que es un negocio familiar porque te tratan como a uno más; me ayudaron incluso con un siniestro de un seguro que no tenía con ellos.",
-      "author": "A. Padial"
+      "author": "A. Padial",
+      "avatar": "/images/avatars/avatar-padial.jpg"
     },
     {
       "id": "testimonio-3",
       "quote": "Llevo años con ellos y la tranquilidad que te dan no tiene precio. Siempre te explican la letra pequeña con total transparencia y buscan lo mejor para ti, no para su beneficio.",
-      "author": "F. Villegas"
+      "author": "F. Villegas",
+      "avatar": "/images/avatars/avatar-villegas.jpg"
     }
   ],
   "contact": {

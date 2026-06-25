@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { Testimonial } from "@/types/content";
@@ -26,8 +27,13 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
               <blockquote className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
                 {testimonial.quote}
               </blockquote>
-              <figcaption className="mt-4 text-sm font-semibold text-foreground">
-                — {testimonial.author}
+              <figcaption className="mt-4 flex items-center gap-3 text-sm font-semibold text-foreground">
+                {testimonial.avatar ? (
+                  <span className="relative h-10 w-10 overflow-hidden rounded-full border border-neutral-200">
+                    <Image src={testimonial.avatar} alt={testimonial.author} fill className="object-cover" />
+                  </span>
+                ) : null}
+                {testimonial.author}
               </figcaption>
             </figure>
           ))}
