@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import PasswordField from "@/components/ui/PasswordField";
 
 function ResetForm() {
   const searchParams = useSearchParams();
@@ -18,7 +19,7 @@ function ResetForm() {
     const res = await fetch("/api/admin/reset-password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token, password }),
+      body: JSON.stringify({ token, password: password.trim() }),
     });
     setLoading(false);
     if (!res.ok) {
@@ -50,20 +51,7 @@ function ResetForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label htmlFor="password" className="block text-sm font-medium text-neutral-700">
-          Nueva contraseña
-        </label>
-        <input
-          id="password"
-          type="password"
-          required
-          minLength={8}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
-        />
-      </div>
+      <PasswordField label="Nueva contraseña" required minLength={8} value={password} onChange={setPassword} />
       {error && <p className="text-sm text-red-600">{error}</p>}
       <button
         type="submit"

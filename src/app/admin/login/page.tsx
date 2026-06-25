@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import PasswordField from "@/components/ui/PasswordField";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -53,19 +54,7 @@ export default function AdminLoginPage() {
         </h1>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-neutral-700">
-              Contraseña
-            </label>
-            <input
-              id="password"
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
-            />
-          </div>
+          <PasswordField label="Contraseña" required value={password} onChange={setPassword} />
 
           {error && <p className="text-sm text-red-600">{error}</p>}
 
