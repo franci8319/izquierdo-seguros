@@ -82,6 +82,12 @@
       "title": "Decesos",
       "description": "Evita la carga económica y de gestión a tu familia en un momento difícil, con un servicio completo y de confianza.",
       "icon": "decesos"
+    },
+    {
+      "id": "seguro-1782369868208",
+      "title": "R.C., mascotas, caza y pesca, accidentes...",
+      "description": "Te damos cobertura y asesoramiento de lo que realmete necesitas y te importa.",
+      "icon": "mascotas"
     }
   ],
   "contact": {
