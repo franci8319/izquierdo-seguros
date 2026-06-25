@@ -6,6 +6,7 @@ import InsuranceProducts from "@/components/sections/InsuranceProducts";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Contact from "@/components/sections/Contact";
 import BannerModal from "@/components/BannerModal";
+import WhatsappFloatingButton from "@/components/ui/WhatsappFloatingButton";
 import { getSiteContent } from "@/lib/content";
 
 // Content is admin-edited and must reflect the latest deploy immediately;
@@ -28,6 +29,7 @@ export default function Home() {
         <Contact contact={content.contact} />
       </main>
       <Footer contact={content.contact} legal={content.legal} />
+      <WhatsappFloatingButton contact={content.contact} />
     </>
   );
 }

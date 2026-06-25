@@ -11,6 +11,7 @@ import AboutUs from "@/components/sections/AboutUs";
 import InsuranceProducts from "@/components/sections/InsuranceProducts";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Contact from "@/components/sections/Contact";
+import WhatsappFloatingButton from "@/components/ui/WhatsappFloatingButton";
 
 import EditButton from "@/components/admin/EditButton";
 import EditDrawer from "@/components/admin/EditDrawer";
@@ -155,6 +156,7 @@ export default function AdminPage() {
       </main>
 
       <Footer contact={content.contact} legal={content.legal} />
+      <WhatsappFloatingButton contact={content.contact} />
 
       <EditDrawer title="Editar portada" open={openEditor === "hero"} onClose={() => setOpenEditor(null)}>
         <div className="space-y-6">
