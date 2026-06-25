@@ -1,6 +1,6 @@
 import TextField from "./TextField";
 import TextAreaField from "./TextAreaField";
-import ImageUploader from "./ImageUploader";
+import AvatarPicker from "./AvatarPicker";
 import type { Testimonial } from "@/types/content";
 
 export default function TestimonialsEditor({
@@ -53,8 +53,7 @@ export default function TestimonialsEditor({
               value={testimonial.author}
               onChange={(author) => updateTestimonial(index, { author })}
             />
-            <ImageUploader
-              label="Foto del cliente"
+            <AvatarPicker
               value={testimonial.avatar}
               onChange={(avatar) => updateTestimonial(index, { avatar })}
             />
