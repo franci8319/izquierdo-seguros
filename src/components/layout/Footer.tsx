@@ -70,7 +70,7 @@ export default function Footer({
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/50">
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/50">
           <p>© {year} Izquierdo Seguros. Todos los derechos reservados.</p>
           {legal.razonSocial && (
             <p className="mt-1">

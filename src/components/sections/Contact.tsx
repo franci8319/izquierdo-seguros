@@ -7,7 +7,7 @@ import type { SiteContent } from "@/types/content";
 
 export default function Contact({ contact }: { contact: SiteContent["contact"] }) {
   return (
-    <section id="contacto" className="bg-brand-900 py-20 text-white sm:py-28">
+    <section id="contacto" className="bg-brand-900 py-10 text-white sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Contacto"

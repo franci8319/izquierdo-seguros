@@ -5,7 +5,7 @@ import type { SeguroContent } from "@/types/content";
 
 export default function InsuranceProducts({ seguros }: { seguros: SeguroContent[] }) {
   return (
-    <section id="seguros" className="relative overflow-hidden bg-white py-20 sm:py-28">
+    <section id="seguros" className="relative overflow-hidden bg-white py-10 sm:py-14">
       <div
         className="absolute inset-0 opacity-10"
         style={{

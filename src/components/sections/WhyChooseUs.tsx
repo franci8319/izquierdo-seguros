@@ -5,7 +5,7 @@ import type { SiteContent } from "@/types/content";
 
 export default function WhyChooseUs({ whyChooseUs }: { whyChooseUs: SiteContent["whyChooseUs"] }) {
   return (
-    <section id="por-que-elegirnos" className="bg-neutral-50 py-20 sm:py-28">
+    <section id="por-que-elegirnos" className="bg-neutral-50 py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Por qué elegirnos" title={whyChooseUs.heading} align="center" />
 
