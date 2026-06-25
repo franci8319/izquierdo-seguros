@@ -5,8 +5,17 @@ import type { SeguroContent } from "@/types/content";
 
 export default function InsuranceProducts({ seguros }: { seguros: SeguroContent[] }) {
   return (
-    <section id="seguros" className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="seguros" className="relative overflow-hidden bg-white py-20 sm:py-28">
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url(/images/patterns/back-seguros.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Nuestros seguros"
           title="Seguros pensados para tu día a día"
