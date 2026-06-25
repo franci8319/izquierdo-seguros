@@ -6,7 +6,7 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
   if (testimonials.length === 0) return null;
 
   return (
-    <section id="opiniones" className="bg-neutral-50 py-10 sm:py-14">
+    <section id="opiniones" className="bg-amber-50 py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Opiniones" title="Lo que dicen nuestros clientes" align="center" />
 
