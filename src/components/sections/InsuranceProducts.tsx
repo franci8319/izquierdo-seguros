@@ -11,7 +11,7 @@ export default function InsuranceProducts({ seguros }: { seguros: SeguroContent[
         style={{
           backgroundImage: "url(/images/patterns/back-seguros.jpg)",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
         }}
       />
