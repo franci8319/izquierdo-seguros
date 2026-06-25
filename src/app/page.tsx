@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import AboutUs from "@/components/sections/AboutUs";
 import InsuranceProducts from "@/components/sections/InsuranceProducts";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import BannerModal from "@/components/BannerModal";
 import WhatsappFloatingButton from "@/components/ui/WhatsappFloatingButton";
@@ -26,6 +27,7 @@ export default function Home() {
         <AboutUs aboutUs={content.aboutUs} aboutImage={content.images.about} />
         <InsuranceProducts seguros={content.seguros} />
         <WhyChooseUs whyChooseUs={content.whyChooseUs} />
+        <Testimonials testimonials={content.testimonials} />
         <Contact contact={content.contact} />
       </main>
       <Footer contact={content.contact} legal={content.legal} />

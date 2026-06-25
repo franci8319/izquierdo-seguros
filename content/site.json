@@ -90,6 +90,23 @@
       "icon": "mascotas"
     }
   ],
+  "testimonials": [
+    {
+      "id": "testimonio-1",
+      "quote": "Trato perfecto, nunca me han querido vender nada más de lo que necesito. Da gusto dar con gente tan honrada en este sector. Recomendables 100%.",
+      "author": "C. Melguizo"
+    },
+    {
+      "id": "testimonio-2",
+      "quote": "Muy amables tanto el padre como la hija. Se nota que es un negocio familiar porque te tratan como a uno más; me ayudaron incluso con un siniestro de un seguro que no tenía con ellos.",
+      "author": "A. Padial"
+    },
+    {
+      "id": "testimonio-3",
+      "quote": "Llevo años con ellos y la tranquilidad que te dan no tiene precio. Siempre te explican la letra pequeña con total transparencia y buscan lo mejor para ti, no para su beneficio.",
+      "author": "F. Villegas"
+    }
+  ],
   "contact": {
     "phoneLandline": "958 780 348",
     "phoneMobile": "659 518 748",

@@ -10,6 +10,7 @@ import Hero from "@/components/sections/Hero";
 import AboutUs from "@/components/sections/AboutUs";
 import InsuranceProducts from "@/components/sections/InsuranceProducts";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import WhatsappFloatingButton from "@/components/ui/WhatsappFloatingButton";
 
@@ -19,12 +20,13 @@ import HeroEditor from "@/components/admin/HeroEditor";
 import AboutEditor from "@/components/admin/AboutEditor";
 import SegurosEditor from "@/components/admin/SegurosEditor";
 import WhyChooseUsEditor from "@/components/admin/WhyChooseUsEditor";
+import TestimonialsEditor from "@/components/admin/TestimonialsEditor";
 import ImageUploader from "@/components/admin/ImageUploader";
 import ContactLegalEditor from "@/components/admin/ContactLegalEditor";
 import BannerEditor from "@/components/admin/BannerEditor";
 import ChangePasswordEditor from "@/components/admin/ChangePasswordEditor";
 
-type EditorKey = "hero" | "about" | "seguros" | "why" | "contact" | "banner" | "password" | null;
+type EditorKey = "hero" | "about" | "seguros" | "why" | "testimonials" | "contact" | "banner" | "password" | null;
 
 export default function AdminPage() {
   const router = useRouter();
@@ -150,6 +152,11 @@ export default function AdminPage() {
         </div>
 
         <div className="relative">
+          <EditButton label="Editar opiniones" onClick={() => setOpenEditor("testimonials")} />
+          <Testimonials testimonials={content.testimonials} />
+        </div>
+
+        <div className="relative">
           <EditButton label="Editar contacto" onClick={() => setOpenEditor("contact")} />
           <Contact contact={content.contact} />
         </div>
@@ -198,6 +205,13 @@ export default function AdminPage() {
         <WhyChooseUsEditor
           whyChooseUs={content.whyChooseUs}
           onChange={(whyChooseUs) => setContent({ ...content, whyChooseUs })}
+        />
+      </EditDrawer>
+
+      <EditDrawer title="Editar opiniones" open={openEditor === "testimonials"} onClose={() => setOpenEditor(null)}>
+        <TestimonialsEditor
+          testimonials={content.testimonials}
+          onChange={(testimonials) => setContent({ ...content, testimonials })}
         />
       </EditDrawer>
 

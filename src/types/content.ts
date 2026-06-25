@@ -18,6 +18,12 @@ export type AboutUsStat = {
   label: string;
 };
 
+export type Testimonial = {
+  id: string;
+  quote: string;
+  author: string;
+};
+
 export type SiteContent = {
   hero: {
     eyebrow: string;
@@ -35,6 +41,7 @@ export type SiteContent = {
     cards: WhyChooseUsCard[];
   };
   seguros: SeguroContent[];
+  testimonials: Testimonial[];
   contact: {
     phoneLandline: string;
     phoneMobile: string;
