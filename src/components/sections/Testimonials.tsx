@@ -3,6 +3,18 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { Testimonial } from "@/types/content";
 
+function StarRating() {
+  return (
+    <span className="flex items-center gap-0.5" aria-label="5 de 5 estrellas">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-amber-400" aria-hidden="true">
+          <path d="M10 1.5l2.59 5.25 5.79.84-4.19 4.08.99 5.77L10 14.77l-5.18 2.67.99-5.77L1.62 7.59l5.79-.84z" />
+        </svg>
+      ))}
+    </span>
+  );
+}
+
 export default function Testimonials({ testimonials }: { testimonials: Testimonial[] }) {
   if (testimonials.length === 0) return null;
 
@@ -33,7 +45,10 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
                     <Image src={testimonial.avatar} alt={testimonial.author} fill className="object-cover" />
                   </span>
                 ) : null}
-                {testimonial.author}
+                <span className="flex flex-col">
+                  <span>{testimonial.author}</span>
+                  <StarRating />
+                </span>
               </figcaption>
             </figure>
           ))}
